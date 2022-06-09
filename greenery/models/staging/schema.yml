@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: users_stg
+    description: "Formatted version of the users table."
+    columns:
+      - name: id
+        description: "The primary key for the greenery users table."
+        tests:
+          - unique
+          - not_null
+
+  - name: events_stg
+    description: "Formatted version of the events table"
+    columns:
+      - name: event_id
+        description: "The primary key for the greenery events table."
+        tests:
+          - unique
+          - not_null
+
+  - name: addresses_stg
+    description: "Formatted version of the addresses table"
+    columns:
+      - name: address_id
+        description: "The primary key for the greenery addresses table."
+        tests:
+          - unique
+          - not_null
+
+  - name: orders_stg
+    description: "Formatted version of the orders table"
+    columns:
+      - name: order_id
+        description: "The primary key for the greenery orders table."
+        tests:
+          - unique
+          - not_null
+
+  - name: products_stg
+    description: "Formatted version of the products table"
+    columns:
+      - name: product_id
+        description: "The primary key for the greenery productss table."
+        tests:
+          - unique
+          - not_null
+
+  - name: order_items_stg
+    description: "Formatted version of the order_items table"
+    columns:
+      - name: order_id
+        description: "The primary key for the greenery order_items table."
+        tests:
+          - unique
+          - not_null
+
+  - name: promos_stg
+    description: "Formatted version of the promos table"
+    columns:
+      - name: promo_id
+        description: "The primary key for the greenery promos table."
+        tests:
+          - unique
+          - not_null
