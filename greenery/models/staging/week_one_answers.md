@@ -1,10 +1,12 @@
--- How many users do we have?
+How many users do we have?
+*Answer: 130*
+```
 SELECT COUNT(DISTINCT user_id) FROM dbt.dbt_junji_s.users_stg
+```
 
--- Answer: 130
-
-
--- On average, how many orders do we receive per hour?
+On average, how many orders do we receive per hour?
+*Answer: Average of 7.52 order per hour each day*
+```
 WITH t1 AS (
 SELECT
   order_id
@@ -23,12 +25,12 @@ GROUP BY time
 SELECT
  AVG(count_orders)
 FROM t2
+```
 
--- Answer: Average of 7.52 order per hour each day
 
-
--- On average, how long does an order take from being placed to being delivered?
-
+On average, how long does an order take from being placed to being delivered?
+*Answer: Average of 3 days and 21 hours.*
+```
 WITH t1 AS (
 SELECT
   order_id
@@ -46,12 +48,12 @@ SELECT
   date_part('day', average_time) AS days
   , date_part('hour', average_time) AS hours
 FROM t2
+```
 
--- Answer: Average of 3 days and 21 hours.
 
-
--- How many users have only made one purchase? Two purchases? Three+ purchases?
-
+How many users have only made one purchase? Two purchases? Three+ purchases?
+*Answer: 25 users with 1 purchase, 28 users with 2 purchases, 71 users with 3+ purchases*
+```
 WITH t1 AS (
 SELECT
   user_id
@@ -69,11 +71,12 @@ SELECT
   , COUNT(user_id) AS count_users
 FROM t1
 GROUP BY 1
+```
 
--- Answer: 25 users with 1 purchase, 28 users with 2 purchases, 71 users with 3+ purchases
 
-
--- On average, how many unique sessions do we have per hour?
+On average, how many unique sessions do we have per hour?
+*Answer: 16 sessions per hour on average*
+```
 WITH t1 AS (
 SELECT
   date_trunc('hour', created_at_utc) AS time_difference
@@ -85,5 +88,4 @@ GROUP BY 1
 SELECT
   AVG(count_sessions)
 FROM t1
-
--- Answer: 16 sessions per hour on average
+```
