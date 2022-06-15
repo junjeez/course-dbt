@@ -1,4 +1,4 @@
-{{config(materialized = 'view')}}
+{{config(materialized = 'table')}}
 
 WITH base as (
 SELECT * FROM {{ source('public', 'order_items') }}
