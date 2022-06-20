@@ -57,7 +57,11 @@ product
 ---
 
 **Part 2: Tests**
+What assumptions are you making about each model? (i.e. why are you adding each test?)
+> For my testing, I focused on making sure the unique ID for that model was correct (unique and not null). For other fields, we may not have data, such as how not every page visit results in an order. Or duplicates may be okay, such as one user making multiple orders.
+<br>
+Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests?
+> From what I saw, my tests were running cleanly. However, I can imagine that in the future when I create my own tests with more specific logic I will see the need to adjust my models or tests.
 <br>
 Your stakeholders at Greenery want to understand the state of the data each day. Explain how you would ensure these tests are passing regularly and how you would alert stakeholders about bad data getting through.
-<br>
-> *Ideally, I would be able to schedule dbt build to run on a regular scheduled and test the models each time after it's built. I would want to receive an alert any time a test failed and would be able to correct it or let the stakeholders know that we were working on it.*
+> Ideally, I would be able to schedule dbt build to run on a regular scheduled and test the models each time after it's built. I would want to receive an alert any time a test failed and would be able to correct it or let the stakeholders know that we were working on it.
