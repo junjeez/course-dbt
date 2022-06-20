@@ -43,7 +43,6 @@ Explain the marts models you added. Why did you organize the models in the way y
 core
   - name: dim_greenery__user_summary
   - name: fct_greenery__orders_summary
-
 marketing
   - name: dim_greenery__user_order_summary
   - name: fct_greenery__promo_orders
@@ -55,8 +54,10 @@ product
 *I created models that I imagine can help answer questions for these teams. For instance, for the marketing teams the models are summarizing and aggregarating information about orders made by our users, where our users live, and what promotions have been used.*
 <br>
 
+---
+
 **Part 2: Tests**
 <br>
 Your stakeholders at Greenery want to understand the state of the data each day. Explain how you would ensure these tests are passing regularly and how you would alert stakeholders about bad data getting through.
 <br>
-*Ideally, I would be able to schedule dbt build to run on a regular scheduled and test the models each time after it's built. I would want to receive an alert any time a test failed and would be able to correct it or let the stakeholders know that we were working on it.*
+> *Ideally, I would be able to schedule dbt build to run on a regular scheduled and test the models each time after it's built. I would want to receive an alert any time a test failed and would be able to correct it or let the stakeholders know that we were working on it.*
