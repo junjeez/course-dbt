@@ -21,6 +21,8 @@ FROM dbt_junji_s.dim_greenery__sessions_summary
 | b66a7143-c18a-43bb-b5dc-06bb5d1d3160 | ZZ Plant | 53 |
 *(limiting to 5 products with highest conversion rate)*
 
+New model: models/product/**fct_greenery__sessions_orders**
+
 ```
 WITH viewed AS (
   SELECT
@@ -106,7 +108,7 @@ Add package dbt_utils:  /greenery/**packages.yml**
 ```
 packages:
   - package: dbt-labs/dbt_utils
-    version: 0.8.0
+    version: 0.8.6
 ```
 
 New model:  /core/**dim_greenery__orders_products**
