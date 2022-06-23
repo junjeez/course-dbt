@@ -1,0 +1,7 @@
+version: 2
+
+macros:
+  - name: get_shipping_statuses
+    description: "List of shipping statuses based on estimated and actual delivery date."
+    docs: 
+      show: true

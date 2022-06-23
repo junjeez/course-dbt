@@ -187,11 +187,10 @@ models:
         description: "Per session on our website, flag whether an order was made or not." 
         tests: 
         - accepted_values:
-            values: ["Y", "N"]
-      - name: count_products_viewed
-        description: "Per session on our website, count the number of products viewed."
-      - name: count_products_ordered
-        description: "Per session on our website, count the number of products ordered."
+            values: ["1"]
+      - name: count_unique_products_viewed
+      - name: count_unique_products_ordered
+      - name: count_number_of_products_ordered
       - name: time_first_page_opened_utc
         description: "Per session on our website, return the time when the first page was opened."
       - name: time_spent_during_session
@@ -225,6 +224,22 @@ models:
       - name: count_orders
       - name: count_products_purchased
 
+  - name: fct_greenery__sessions_orders
+    columns:
+      - name: session_id
+      - name: user_id
+      - name: page_url
+      - name: event_guid
+      - name: viewed_product_id
+        description: "ID of products that a user views on our web page."
+      - name: viewed_product_name
+      - name: order_id
+      - name: ordered_product_id
+        description: "ID of products that a user has ordered."
+      - name: ordered_product_name
+      - name: quantity
+      - name: created_at_utc
+
   - name: fct_greenery__orders_summary
     columns:
       - name: order_guid
@@ -246,3 +261,7 @@ models:
       - name: estimated_delivery_utc
       - name: delivered_at_utc
       - name: delivery_status
+
+  - name: fct_greenery__orders_status
+
+  - name: dim_greenery__shipping_service_performance
