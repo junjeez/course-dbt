@@ -268,3 +268,5 @@ models:
   - name: fct_greenery__orders_status
 
   - name: dim_greenery__shipping_service_performance
+
+  - name: dim_greenery__orders_products
