@@ -1,5 +1,8 @@
 version: 2
 
+on-run-end:
+  - "grant usage on schema {{dbt_junji_s}} to role reporting"
+
 models:
   - name: stg_greenery__users
     description: "Staging version of the users table. Users who have made orders on our website."

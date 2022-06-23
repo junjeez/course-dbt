@@ -87,3 +87,24 @@ macros:
     docs: 
       show: true
 ```
+
+***
+
+## PART 3
+Added hook to my database: /models/**schema.yml**
+```
+...
+on-run-end:
+  - "grant usage on schema {{dbt_junji_s}} to role reporting"
+...
+```
+
+***
+
+## PART 4
+Add package dbt_utils:  /greenery/**packages.yml**
+```
+packages:
+  - package: dbt-labs/dbt_utils
+    version: 0.8.0
+```
