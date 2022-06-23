@@ -109,7 +109,7 @@ packages:
     version: 0.8.0
 ```
 
-New model:  /core/**dim_greenery__orders_products
+New model:  /core/**dim_greenery__orders_products**
 ```
 {{config(materialized = 'table')}}
 
@@ -135,4 +135,4 @@ GROUP BY 1
 
 ## PART 5
 
-My improved DAG:  With the use of macros I was able to create more sophisticated models that aggregated data in new ways. This added models farther to the right on my DAG.
+> My improved DAG:  With the use of macros I was able to create more sophisticated models that aggregated data in new ways. This added models farther to the right on my DAG.
