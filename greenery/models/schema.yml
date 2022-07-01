@@ -270,3 +270,7 @@ models:
   - name: dim_greenery__shipping_service_performance
 
   - name: dim_greenery__orders_products
+
+  - name: dim_greenery__event_type_summary
+  
+  - name: fct_greenery__sessions_users

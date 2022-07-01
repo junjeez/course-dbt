@@ -1,0 +1,12 @@
+version: 2
+
+exposures:  
+  - name: Product Funnel Dashboard
+    description: >
+      Core model for the product funnel dashboard.
+    type: dashboard
+    owner:
+      name: Junji Shang
+      email: junji.shang@colorofchange.org
+    depends_on:
+      - ref('fct_greenery__sessions_users')

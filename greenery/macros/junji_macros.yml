@@ -5,4 +5,6 @@ macros:
     description: "List of shipping statuses based on estimated and actual delivery date."
     docs: 
       show: true
+  - name: create_event_type_flags
+  
 
